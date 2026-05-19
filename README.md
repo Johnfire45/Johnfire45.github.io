@@ -1,40 +1,54 @@
-# Portfolio-Template
-A Portfolio/Resume website template for Programmers, Geeks, Developers, Hackers etc.
+# johnfire45.github.io
 
-### Highlights
-1. Setup is very easy and you get a portfolio template of your own for free.
-2. To add your details, you just need simple editing skills. No code changes required!
-3. Simple and Fast website User Interface.
+Personal GitHub Pages site for Harshit Shah — Independent Cybersecurity Consultant.
 
-### Website UI Gallary
-#### About Tab
-![About Tab](https://i.postimg.cc/WpCWc7gB/1.png)
+## Live URLs
 
-#### Skills Tab
-![Skills Tab](https://i.postimg.cc/HL6zZ0TP/2.png)
+| URL | Content |
+|---|---|
+| https://johnfire45.github.io/ | Consulting website (primary) |
+| https://johnfire45.github.io/portfolio/ | Old portfolio (preserved) |
 
-#### Project Tab
-![Project Tab](https://i.imgur.com/u4oyV6r.png)
+## Repo structure
 
-#### Contact Tab
-![Contact Tab](https://i.postimg.cc/Y0WxCJYJ/4.png)
+```
+/
+├── index.html        ← Consulting website homepage
+├── styles.css        ← Consulting website CSS
+├── assets/           ← Images, icons (currently empty — pending favicon/OG card)
+├── portfolio/        ← Old portfolio (kept intact, not modified)
+├── favicon.ico
+├── robots.txt
+└── LICENSE
+```
 
-### Demo
-For Demo of this template you can visit http://0xprateek-portfolio-template.rf.gd
+## Consulting website
 
-### Quick Start
-If you are reading this then I will assume that you know something about code and want to make a resume website of yours then this open-source project may help you setup it to showcase all your creations without effort.
-- For adding your avatar , You have to replace images/my.jpg with your square photo [Perfect size : 160 x 160].
-- For changing background image, You need to replace images/floor.jpg with your prefered background.
-- For changing rest of the information, simply open index.html and you can easily understand everything.
+Built with plain HTML, CSS, and minimal vanilla JS. No frameworks, no build step.
 
+**Services:** Security Audit & VAPT · Secure Code Review · Cybersecurity Advisory
 
-### Contributing
-Any and all contributions, issues, features and tips are welcome.
+**Contact:** hsharshit4545@gmail.com · [LinkedIn](https://www.linkedin.com/in/harshit-shah-699a54127/)
 
-### License
-**Portfolio-Template** is licence under [GPL v3.0 license](https://www.gnu.org/licenses/gpl-3.0.en.html)
+Source files are maintained at `Consultation-firm/website-v1/` in a separate working directory. Copy updated files to this repo root to redeploy.
 
-### Contact
+## Deploying updates
 
-For any Suggestion / Ideas ping me at [@prateekis1](https://twitter.com/prateekis1)
+```bash
+# Copy updated files from the working directory
+cp ~/Documents/Consultation-firm/website-v1/index.html ./index.html
+cp ~/Documents/Consultation-firm/website-v1/styles.css ./styles.css
+
+# Commit and push
+git add index.html styles.css
+git commit -m "Update consulting website"
+git push origin main
+```
+
+GitHub Pages deploys automatically on push to `main`. Live within ~2 minutes.
+
+## Restoring the portfolio
+
+The old portfolio is preserved in `portfolio/` and accessible at `/portfolio/`. It has not been modified.
+
+If you need to restore it to root: `git checkout backup/portfolio-original`.
