@@ -1,370 +1,574 @@
 <!DOCTYPE html>
-<html class="no-js">
-
+<html lang="en">
 <head>
-  <!-- Add Your Title -->
-  <title> Hacker Profile </title>
-
-  <!-- All Meta Tags -->
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width">
-
-  <!-- All Link tags -->
-  <link rel='shortcut icon' type='image/x-icon' href='favicon.ico' />
-  <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png">
-  <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-72x72-precomposed.png">
-  <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-114x114-precomposed.png">
-  <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-144x144-precomposed.png">
-  <link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
-  <link href='https://fonts.googleapis.com/css?family=Amaranth' rel='stylesheet'>
-  <link rel="stylesheet" href="css/normalize.min.css">
-  <link rel="stylesheet" href="css/main.css">
-
-  <!-- All script tags -->
-  <script>document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
-  <script src="js/vendor/jquery.hashchange.min.js"></script>
-  <script src="js/vendor/jquery.easytabs.min.js"></script>
-  <script src="js/main.js"></script>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Independent Cybersecurity Consultant helping startups, SaaS companies, and fintech products improve security posture through manual security audits, VAPT, secure code review, and advisory.">
+  <meta property="og:title" content="Harshit Shah — Independent Cybersecurity Consultant">
+  <meta property="og:description" content="Manual security audits, VAPT, secure code review, and cybersecurity advisory for startups, SaaS companies, and growing businesses.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://johnfire45.github.io/">
+  <title>Harshit Shah — Independent Cybersecurity Consultant</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
+<body>
 
-<!-- Start of Body Tag -->
-
-<body class="bg-fixed bg-1">
-  <div class="main-container">
-    <div class="main wrapper clearfix">
-
-      <!-- Header Start -->
-      <header id="header">
-        <div id="logo">
-          <h6>
-            Harshit Shah
-          </h6>
-          <h4>
-            Ethical Hacker
-          </h4>
-        </div>
-      </header>
-
-      <!-- Text "hello world" -->
-      <header id="header">
-        <div id="helloworld">
-          <h1>
-            Welcome !!
-          </h1>
-        </div>
-      </header>
-
-      <!-- Main Tab Container -->
-      <div id="tab-container" class="tab-container">
-
-        <!-- Tab List -->
-        <ul class='etabs'>
-
-          <li class='tab' id="tab-about">
-            <a href="#about">
-              <i class="icon-user"></i>
-              <span>
-                About Me
-              </span>
-            </a>
-          </li>
-
-          <li class='tab'>
-            <a href="#resume">
-              <i class="icon-file-text"></i>
-              <span>
-                Resume
-              </span>
-            </a>
-          </li>
-
-          <!-- <li class='tab'>
-            <a href="#portfolio">
-              <i class="icon-heart"></i>
-              <span>
-                Projects
-              </span>
-            </a>
-          </li> -->
-
-          <li class='tab'>
-            <a href="#contact">
-              <i class="icon-envelope"></i>
-              <span>
-                Contact
-              </span>
-            </a>
-          </li>
-
+  <!-- ============================================================
+       HEADER
+  ============================================================ -->
+  <header class="header" id="siteHeader">
+    <div class="container">
+      <nav class="nav" role="navigation" aria-label="Main navigation">
+        <a href="#hero" class="nav-logo">
+          <span class="logo-name">Harshit Shah</span>
+          <span class="logo-sub">Cybersecurity Consultant</span>
+        </a>
+        <button class="nav-toggle" id="navToggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="navLinks">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="nav-links" id="navLinks" role="list">
+          <li><a href="#services" class="nav-link">Services</a></li>
+          <li><a href="#why" class="nav-link">Why Me</a></li>
+          <li><a href="#work" class="nav-link">Proof</a></li>
+          <li><a href="#process" class="nav-link">Process</a></li>
+          <li><a href="#contact" class="nav-link nav-cta">Get in Touch</a></li>
         </ul>
-        <!-- End Tab List -->
+      </nav>
+    </div>
+  </header>
 
-        <!-- ----------------------------------------------------------------------------------- -->
-        <!-- Code for differents Tabs strat from here. -->
-        <div id="tab-data-wrap">
+  <main>
 
-          <!-- About Tab Data -->
-          <div id="about">
-            <section class="clearfix">
-              <div class="g2">
-                <div class="photo">
-                  <img src="./images/floor.jpg" alt="Your alt text" height="200">
-                </div>
-                <div class="info">
-                  <h2>
-                    <p></p>
-                    Harshit Shah
-                  </h2>
-                  <h4>
-                    Ethical Hacker
-                  </h4>
-                  <p>
-                    Cybersecurity professional well versed in penetration testing techniques. Brings project management experience and creative
-problem-solving abilities. I believe that one comprehends best by explaining it to both tech and non-tech individuals in an easily
-understandable form. I am a blend of both sides and act as a bridge to make them understand the risks and business impact involved in
-the reported security issues.
-                  </p>
-                  </p>
-                </div>
-              </div>
+    <!-- ============================================================
+         HERO
+         Note: .hero elements use CSS animation (not reveal) because
+         they are always above the fold.
+    ============================================================ -->
+    <section id="hero" class="section hero">
+      <div class="hero-bg" aria-hidden="true">
+        <div class="hero-glow-primary"></div>
+        <div class="hero-glow-card"></div>
+        <div class="hero-glow-secondary"></div>
+        <div class="hero-band"></div>
+        <div class="hero-dot-grid"></div>
+        <div class="hero-glow-bottom"></div>
+      </div>
+      <div class="container">
+        <div class="hero-inner">
 
-              <div class="g1">
-                <div class="main-links sidebar">
-                  <ul>
-                    <li>
-                      <a href="#resume">
-                        View My Resume
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#portfolio">
-                        View My Projects
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#contact">
-                        Hire me for your next project
-                      </a>
-                    </li>
-                  </ul>
-                </div>
+          <!-- Left: text content -->
+          <div class="hero-content">
+            <p class="eyebrow">Independent Cybersecurity Consultant</p>
+            <h1 class="hero-heading">
+              Cybersecurity Consulting for
+              Startups, SaaS &amp; Growing Businesses
+            </h1>
+            <p class="hero-sub">
+              I help product and engineering teams find real security risks, improve security posture, and fix issues through manual audits, VAPT, secure code review, and advisory.
+            </p>
+            <div class="hero-actions">
+              <a href="#contact" class="btn btn-primary">Get in Touch &rarr;</a>
+              <a href="#services" class="btn btn-ghost">View Services</a>
+            </div>
+
+            <!-- Credibility badges -->
+            <div class="cred-badges">
+              <div class="cred-badge">
+                <span class="cred-dot" aria-hidden="true"></span>
+                6+ Years Security Experience
               </div>
-              <div class="break">
+              <div class="cred-badge">
+                <span class="cred-dot" aria-hidden="true"></span>
+                Ex-Paytm
               </div>
-              <div class="contact-info">
-                <div class="g1">
-                  <div class="item-box clearfix">
-                    <i class="icon-envelope"></i>
-                    <div class="item-data">
-                      <h3>
-                        <a href="mailto:write@your_mail.here">
-                          E-Mail Address
-                          <img src="./images/email.png" height="25" align="middle">
-                        </a>
-                      </h3>
-                      <p>
-                        hsharshit45@gmail.com
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="g1">
-                  <div class="item-box clearfix">
-                    <i class="icon-facebook"></i>
-                    <div class="item-data">
-                      <h3>
-                        <a href=" https://app.hackthebox.eu/users/163925">
-                          Hack The Box - Profile
-                          <img src="./images/htb.jpeg" height="25" align="middle" >
-                        </a>
-                      </h3>
-                      <p>
-                        Johnfire
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="g1">
-                  <div class="item-box clearfix">
-                    <i class="icon-twitter"></i>
-                    <div class="item-data">
-                      <h3>
-                        <a href="https://www.linkedin.com/in/harshit-shah-699a54127/">
-                          linkedin - Profile
-                          <img src="./images/linkedin.png" height="25" align="middle" >
-                        </a>
-                      </h3>
-                      <p>
-                        Harshit Shah
-                      </p>
-                    </div>
-                  </div>
-                </div>
+              <div class="cred-badge">
+                <span class="cred-dot" aria-hidden="true"></span>
+                Ex-Lucideus / Safe Security
               </div>
-            </section>
-          </div>
-          <!-- End About Tab Data -->
-          <!-- ----------------------------------------------------------------------------------- -->
-          <!-- skills Tab Data -->
-          <div id="resume">
-            <iframe src="./Harshit Shah-resume.pdf" height="1000" width="100%"></iframe>>
+              <div class="cred-badge">
+                <span class="cred-dot" aria-hidden="true"></span>
+                Built UniReq
+              </div>
+            </div>
           </div>
 
-          <!-- End skills Tab Data -->
-          <!-- ----------------------------------------------------------------------------------- -->
-          <!-- Projects Tab Data -->
-          <!-- <div id="portfolio">
-            <section class="clearfix">
-              <div class="project-section">
-                <div class="project-container">
-                  <div class="project-img-container"
-                    onclick="document.getElementById('modal-wrapper').style.display='block'">
-                    <img src="./images/floor.jpg" alt="project image">
-                  </div>
-                  <p class="project-title">Project Title</p>
-                </div>
-                <div class="project-container">
-                  <div class="project-img-container"
-                    onclick="document.getElementById('modal-wrapper').style.display='block'">
-                    <img src="./images/floor.jpg" alt="project image">
-                  </div>
-                  <p class="project-title">Project Title</p>
-                </div>
-                <div class="project-container">
-                  <div class="project-img-container"
-                    onclick="document.getElementById('modal-wrapper').style.display='block'">
-                    <img src="./images/floor.jpg" alt="project image">
-                  </div>
-                  <p class="project-title">Project Title</p>
-                </div>
-                <div class="project-container">
-                  <div class="project-img-container"
-                    onclick="document.getElementById('modal-wrapper').style.display='block'">
-                    <img src="./images/floor.jpg" alt="project image">
-                  </div>
-                  <p class="project-title">Project Title</p>
-                </div>
-                <div class="project-container">
-                  <div class="project-img-container"
-                    onclick="document.getElementById('modal-wrapper').style.display='block'">
-                    <img src="./images/floor.jpg" alt="project image">
-                  </div>
-                  <p class="project-title">Project Title</p>
-                </div>
-                <div class="project-container">
-                  <div class="project-img-container"
-                    onclick="document.getElementById('modal-wrapper').style.display='block'">
-                    <img src="./images/floor.jpg" alt="project image">
-                  </div>
-                  <p class="project-title">Project Title</p>
-                </div>
-                <div class="project-container">
-                  <div class="project-img-container"
-                    onclick="document.getElementById('modal-wrapper').style.display='block'">
-                    <img src="./images/floor.jpg" alt="project image">
-                  </div>
-                  <p class="project-title">Project Title</p>
-                </div>
-                <div class="project-container">
-                  <div class="project-img-container"
-                    onclick="document.getElementById('modal-wrapper').style.display='block'">
-                    <img src="./images/floor.jpg" alt="project image">
-                  </div>
-                  <p class="project-title">Project Title</p>
-                </div>
-                <div class="project-container">
-                  <div class="project-img-container"
-                    onclick="document.getElementById('modal-wrapper').style.display='block'">
-                    <img src="./images/floor.jpg" alt="project image">
-                  </div>
-                  <p class="project-title">Project Title</p>
+          <!-- Right: Security Focus card -->
+          <div class="hero-card-col">
+            <div class="security-focus-card">
+              <div class="sf-header">
+                <h2 class="sf-title">Security Focus</h2>
+                <div class="sf-pills">
+                  <span class="sf-badge sf-badge-1">Manual-first approach</span>
+                  <span class="sf-badge sf-badge-2">Business-risk focused</span>
                 </div>
               </div>
-              <div id="modal-wrapper" class="modal">
-
-                <form class="modal-content animate">
-
-                  <div class="imgcontainer">
-                    <span onclick="document.getElementById('modal-wrapper').style.display='none'" class="close"
-                      title="Close PopUp">&times;</span>
-                    <img src="images/floor.jpg" alt="project" class="avatar">
-                    <h1 class="project_details" style="text-align:center">Project Details</h1>
+              <div class="sf-block">
+                <p class="sf-block-label">Core Capabilities</p>
+                <div class="sf-services">
+                  <div class="sf-service">
+                    <span class="sf-service-num" aria-hidden="true">01</span>
+                    Security Audit &amp; VAPT
                   </div>
-
-                  <div class="container">
-                    <input type="text" placeholder="Project Name" name="uname" readonly>
-                    <textarea class="project_description" rows="3" placeholder="Project Description"
-                      readonly></textarea>
-                    <input type="url" placeholder="Project Link" readonly>
-                    <input type="text" placeholder="Languages used" readonly>
-                    <button class="project_submit" type="submit">Submit</button>
+                  <div class="sf-service">
+                    <span class="sf-service-num" aria-hidden="true">02</span>
+                    Secure Code Review
                   </div>
-
-                </form>
-
-              </div>
-            </section>
-          </div> -->
-          <!-- End Projects tab -->
-          <!-- ----------------------------------------------------------------------------------- -->
-          <!-- Contact Tab Data -->
-          <div id="contact">
-            <section class="clearfix">
-              <div class="g1">
-                <div class="sny-icon-box">
-                  <div class="sny-icon">
-                    <i class="icon-globe"></i>
-                  </div>
-                  <div class="sny-icon-content">
-                    <h4>
-                      Address
-                    </h4>
-                    <p>
-                      127.0.0.1
-                    </p>
+                  <div class="sf-service">
+                    <span class="sf-service-num" aria-hidden="true">03</span>
+                    Cybersecurity Advisory
                   </div>
                 </div>
               </div>
-              <div class="g1">
-                <div class="sny-icon-box">
-                  <div class="sny-icon">
-                    <i class="icon-phone"></i>
-                  </div>
-                  <div class="sny-icon-content">
-                    <h4>
-                      E-mail
-                    </h4>
-                    <p>
-                      hsharshit45@gmail.com
-                    </p>
-                  </div>
-                </div>
+              <div class="sf-divider"></div>
+              <div class="sf-block">
+                <p class="sf-block-label">High-Signal Testing Areas</p>
+                <ul class="sf-areas-list">
+                  <li>Authorization &amp; access control</li>
+                  <li>API abuse cases</li>
+                  <li>Business logic flaws</li>
+                  <li>Session / token security</li>
+                  <li>Developer-friendly remediation</li>
+                </ul>
               </div>
-              <div class="g1">
-                <div class="sny-icon-box">
-                  <div class="sny-icon">
-                    <i class="icon-user"></i>
-                  </div>
-                  <div class="sny-icon-content">
-                    <h4>
-                      About Me
-                    </h4>
-                    <p>
-                      Hacker, gamer, astrology, talks
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div class="break"></div>
-            </section>
+            </div>
           </div>
-          <!-- End Contact Data -->
-          <!-- ----------------------------------------------------------------------------------- -->
+
         </div>
       </div>
-</body>
+    </section>
 
+    <!-- ============================================================
+         TRUST STRIP
+    ============================================================ -->
+    <div class="cap-rail reveal" role="complementary" aria-label="Capabilities">
+      <div class="container">
+        <div class="cap-pills">
+          <span class="cap-pill">Manual VAPT</span>
+          <span class="cap-pill">API Security</span>
+          <span class="cap-pill">Secure Code Review</span>
+          <span class="cap-pill">Business Logic Testing</span>
+          <span class="cap-pill">Authorization Testing</span>
+          <span class="cap-pill">Security Advisory</span>
+          <span class="cap-pill">Remediation Support</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============================================================
+         WHO I HELP
+    ============================================================ -->
+    <section id="who" class="section section-alt">
+      <div class="container">
+        <p class="eyebrow reveal">Clients</p>
+        <h2 class="section-heading reveal" style="transition-delay:50ms">Who I Help</h2>
+        <p class="section-intro reveal" style="transition-delay:110ms">
+          Startups, SaaS companies, fintech products, and growing businesses that need senior security expertise — without hiring a full-time security team.
+        </p>
+        <ul class="client-list" role="list">
+          <li class="reveal">Product teams preparing for launch or a funding round</li>
+          <li class="reveal">SaaS companies facing customer security reviews or enterprise sales requirements</li>
+          <li class="reveal">Fintech and API-heavy platforms handling user data, payments, or sensitive workflows</li>
+          <li class="reveal">Dev agencies building security-sensitive products for clients</li>
+          <li class="reveal">Companies preparing for SOC2, ISO&nbsp;27001, or compliance audits</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         PROBLEMS I SOLVE
+    ============================================================ -->
+    <section id="problems" class="section">
+      <div class="container">
+        <p class="eyebrow reveal">Challenges</p>
+        <h2 class="section-heading reveal" style="transition-delay:50ms">Problems I Solve</h2>
+        <p class="section-intro reveal" style="transition-delay:110ms">
+          Your product handles real user data, financial transactions, or sensitive business operations. Generic automated scans miss the vulnerabilities that matter most — authorization flaws, business logic issues, and API abuse cases that only a manual review reveals.
+        </p>
+        <div class="problem-grid">
+          <div class="problem-card reveal">
+            <h3>Find real exploitable vulnerabilities</h3>
+            <p>Before your users or a breach report finds them — not a list of scanner output with no business context.</p>
+          </div>
+          <div class="problem-card reveal">
+            <h3>Validate authorization and access control</h3>
+            <p>BOLA, IDOR, privilege escalation, and tenant isolation issues require hands-on manual testing — not a checklist.</p>
+          </div>
+          <div class="problem-card reveal">
+            <h3>Fix issues with clear guidance</h3>
+            <p>Developer-friendly remediation — root cause, business impact, and actionable steps your engineers can act on.</p>
+          </div>
+          <div class="problem-card reveal">
+            <h3>Meet customer security requirements</h3>
+            <p>Enterprise and customer security reviews without compliance theatre. A credible report that answers the hard questions.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SERVICES
+    ============================================================ -->
+    <section id="services" class="section section-alt">
+      <div class="container">
+        <p class="eyebrow reveal">What I Offer</p>
+        <h2 class="section-heading reveal" style="transition-delay:50ms">Services</h2>
+        <p class="section-intro reveal" style="transition-delay:110ms">
+          Three focused services covering security audits, code-level review, and ongoing advisory — designed to help teams identify, prioritize, and fix real security risks.
+        </p>
+
+        <div class="service-grid">
+
+          <div class="service-card service-card--blue reveal">
+            <div class="service-number">01</div>
+            <h3 class="service-title">Security Audit &amp; VAPT</h3>
+            <p class="service-desc">
+              Manual security assessment for web applications, APIs, mobile apps, and complex workflows. I test for real exploitable risks — authorization flaws, BOLA/IDOR, authentication weaknesses, business logic abuse, session security, and more.
+            </p>
+            <div class="service-scope">
+              <p class="scope-label">Covers</p>
+              <p class="scope-items">Web &middot; API &middot; Mobile &middot; Admin panel &middot; Business logic &middot; Auth flows</p>
+            </div>
+            <div class="service-deliverables">
+              <p class="deliverables-label">What you get</p>
+              <ul>
+                <li>Executive summary</li>
+                <li>Technical vulnerability report</li>
+                <li>Proof-of-concept evidence</li>
+                <li>Business impact per finding</li>
+                <li>Remediation guidance</li>
+                <li>Remediation discussion call</li>
+                <li>One formal retest round</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="service-card service-card--cyan reveal">
+            <div class="service-number">02</div>
+            <h3 class="service-title">Secure Code Review</h3>
+            <p class="service-desc">
+              Security-focused review of your codebase to find risky implementation patterns, authorization gaps, injection paths, and business logic issues before they reach production.
+            </p>
+            <div class="service-scope">
+              <p class="scope-label">Covers</p>
+              <p class="scope-items">Auth logic &middot; Authorization &middot; API routes &middot; Business logic &middot; Secrets &middot; Dependencies</p>
+            </div>
+            <div class="service-deliverables">
+              <p class="deliverables-label">What you get</p>
+              <ul>
+                <li>Risk-ranked findings</li>
+                <li>Affected files and modules</li>
+                <li>Vulnerable code pattern explanation</li>
+                <li>Exploitability and business impact</li>
+                <li>Secure implementation guidance</li>
+                <li>Developer remediation notes</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="service-card service-card--violet reveal">
+            <div class="service-number">03</div>
+            <h3 class="service-title">Cybersecurity Advisory</h3>
+            <p class="service-desc">
+              Ongoing security guidance for teams that need senior expertise on retainer — security roadmap, release reviews, remediation support, and customer security questionnaire help.
+            </p>
+            <div class="service-scope">
+              <p class="scope-label">Covers</p>
+              <p class="scope-items">Roadmap &middot; Release reviews &middot; Remediation &middot; SOC2/ISO readiness &middot; Questionnaires</p>
+            </div>
+            <div class="service-deliverables">
+              <p class="deliverables-label">What you get</p>
+              <ul>
+                <li>Monthly advisory calls</li>
+                <li>Security roadmap</li>
+                <li>Remediation guidance and prioritization</li>
+                <li>Release review notes</li>
+                <li>Customer questionnaire support</li>
+                <li>Shared action tracker</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="services-footer reveal">
+          <div class="services-footer-text">
+            <p class="pricing-line">Custom pricing based on scope.</p>
+            <p class="pricing-sub">Pricing depends on application complexity, scope, user roles, and timeline. Discussed after a discovery call.</p>
+          </div>
+          <a href="#contact" class="btn btn-primary">Get in Touch to Discuss &rarr;</a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================================
+         WHY WORK WITH ME
+    ============================================================ -->
+    <section id="why" class="section">
+      <div class="container">
+        <p class="eyebrow reveal">Differentiators</p>
+        <h2 class="section-heading reveal" style="transition-delay:50ms">Why Work With Me</h2>
+        <div class="why-grid">
+
+          <div class="why-item reveal">
+            <h3>Manual, not scanner-based</h3>
+            <p>I test for business logic flaws, authorization issues, and real attack chains — not just what an automated tool can report. Every engagement is hands-on and methodical.</p>
+          </div>
+
+          <div class="why-item reveal">
+            <h3>Senior expertise, small client load</h3>
+            <p>I work with a limited number of clients at a time. You get direct, senior-level attention — not a large team where your work ends up with a junior analyst.</p>
+          </div>
+
+          <div class="why-item reveal">
+            <h3>Developer-friendly output</h3>
+            <p>Findings include root cause, business impact, and actionable remediation steps. Not a list of CVEs. Developers can understand and act on the report without a translator.</p>
+          </div>
+
+          <div class="why-item reveal">
+            <h3>6+ years. Real-world fintech experience</h3>
+            <p>Ex-Paytm and Ex-Lucideus / Safe Security. I have worked in high-scale fintech environments and understand how real products are built and where security risk actually lives.</p>
+          </div>
+
+          <div class="why-item reveal">
+            <h3>I also build security tooling</h3>
+            <p>I built UniReq, an open-source Burp Suite extension, to reduce noise during manual security testing. My approach combines offensive security expertise with practical tooling depth.</p>
+          </div>
+
+          <div class="why-item why-item-accent reveal">
+            <h3>Independent, not an agency</h3>
+            <p>No large vendor overhead. No subcontractors. When you work with me, I do the work — scoping, testing, reporting, and the remediation call.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         WORK / UNIREQ
+    ============================================================ -->
+    <section id="work" class="section section-alt">
+      <div class="container">
+        <p class="eyebrow reveal">Open Source</p>
+        <h2 class="section-heading reveal" style="transition-delay:50ms">Proof of Work</h2>
+        <div class="work-card reveal" style="transition-delay:120ms">
+          <div class="work-card-header">
+            <div class="work-card-meta">
+              <p class="work-label">Open Source Tool &nbsp;&middot;&nbsp; Burp Suite Extension</p>
+              <h3 class="work-title">UniReq</h3>
+            </div>
+            <a href="https://github.com/Johnfire45/UniReq" class="btn btn-outline" target="_blank" rel="noopener noreferrer">
+              View UniReq on GitHub &rarr;
+            </a>
+          </div>
+
+          <p class="work-desc">
+            UniReq is an open-source Burp Suite extension I built to reduce duplicate HTTP traffic during manual security testing.
+          </p>
+          <p class="work-desc">
+            While UniReq is a small tooling project, it reflects how I approach security work: reduce noise, understand the real attack surface, and focus on security issues that matter.
+          </p>
+
+          <div class="work-features" role="list" aria-label="Key features">
+            <span class="tag" role="listitem">Real-time deduplication</span>
+            <span class="tag" role="listitem">Host / path / method filtering</span>
+            <span class="tag" role="listitem">Unique request tracking</span>
+            <span class="tag" role="listitem">Export support</span>
+            <span class="tag" role="listitem">Native Burp Suite integration</span>
+          </div>
+          <p class="work-github-profile">
+            <a href="https://github.com/Johnfire45" class="work-profile-link" target="_blank" rel="noopener noreferrer">View GitHub Profile &rarr;</a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         PROCESS
+    ============================================================ -->
+    <section id="process" class="section">
+      <div class="container">
+        <p class="eyebrow reveal">Engagement</p>
+        <h2 class="section-heading reveal" style="transition-delay:50ms">How It Works</h2>
+        <p class="section-intro reveal" style="transition-delay:110ms">
+          A straightforward engagement process with clear milestones at each stage.
+        </p>
+        <div class="process-steps" role="list">
+
+          <div class="process-step reveal" role="listitem">
+            <div class="step-badge">01</div>
+            <div class="step-content">
+              <h3>Discovery Call</h3>
+              <p>We discuss your product, scope, and security concerns. I listen before I quote — pricing follows scope, not the other way around.</p>
+            </div>
+          </div>
+
+          <div class="process-step reveal" role="listitem">
+            <div class="step-badge">02</div>
+            <div class="step-content">
+              <h3>Scope &amp; Proposal</h3>
+              <p>You complete a short questionnaire. I send a proposal with deliverables, timeline, and fixed pricing within 2–3 business days.</p>
+            </div>
+          </div>
+
+          <div class="process-step reveal" role="listitem">
+            <div class="step-badge">03</div>
+            <div class="step-content">
+              <h3>Kick-off &amp; Testing</h3>
+              <p>After agreement and advance payment, testing begins. Critical findings are flagged immediately — not held until the final report.</p>
+            </div>
+          </div>
+
+          <div class="process-step reveal" role="listitem">
+            <div class="step-badge">04</div>
+            <div class="step-content">
+              <h3>Report &amp; Remediation Call</h3>
+              <p>Draft report delivered for review, followed by a call to walk through findings and discuss fixes with your team.</p>
+            </div>
+          </div>
+
+          <div class="process-step reveal" role="listitem">
+            <div class="step-badge">05</div>
+            <div class="step-content">
+              <h3>Final Report &amp; Retesting</h3>
+              <p>Final report delivered after payment clearance. One formal retest round included to verify fixes are in place.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         CONTACT
+    ============================================================ -->
+    <section id="contact" class="section section-contact">
+      <div class="contact-glow" aria-hidden="true"></div>
+      <div class="container">
+        <p class="eyebrow reveal">Let's Talk</p>
+        <h2 class="contact-heading reveal" style="transition-delay:50ms">Get in Touch</h2>
+        <p class="contact-intro reveal" style="transition-delay:110ms">
+          I am available for new engagements. Reach out to discuss scope, timeline, and fit.
+        </p>
+        <div class="contact-links reveal" style="transition-delay:170ms">
+          <a href="mailto:hsharshit4545@gmail.com" class="contact-link">
+            <span class="contact-icon-wrap" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            </span>
+            <span>hsharshit4545@gmail.com</span>
+          </a>
+          <a href="https://www.linkedin.com/in/harshit-shah-699a54127/" class="contact-link" target="_blank" rel="noopener noreferrer">
+            <span class="contact-icon-wrap" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            </span>
+            <span>LinkedIn</span>
+          </a>
+          <a href="https://github.com/Johnfire45" class="contact-link" target="_blank" rel="noopener noreferrer">
+            <span class="contact-icon-wrap" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+            </span>
+            <span>GitHub</span>
+          </a>
+          <a href="https://johnfire45.github.io" class="contact-link" target="_blank" rel="noopener noreferrer">
+            <span class="contact-icon-wrap" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            </span>
+            <span>Portfolio</span>
+          </a>
+        </div>
+        <p class="contact-availability reveal" style="transition-delay:230ms">Currently accepting selected security audit, code review, and advisory engagements.</p>
+        <p class="contact-note reveal" style="transition-delay:280ms">Response within 24 hours on business days. All enquiries are confidential.</p>
+        <a href="mailto:hsharshit4545@gmail.com" class="btn btn-primary btn-large reveal" style="transition-delay:330ms">Start a Security Conversation &rarr;</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-inner">
+        <p class="footer-name">Harshit Shah &mdash; Independent Cybersecurity Consultant</p>
+        <p class="footer-services">Security Audit &amp; VAPT &nbsp;&middot;&nbsp; Secure Code Review &nbsp;&middot;&nbsp; Cybersecurity Advisory</p>
+        <nav class="footer-links" aria-label="Footer links">
+          <a href="https://www.linkedin.com/in/harshit-shah-699a54127/" class="footer-link" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <span class="footer-sep" aria-hidden="true">&middot;</span>
+          <a href="https://github.com/Johnfire45" class="footer-link" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <span class="footer-sep" aria-hidden="true">&middot;</span>
+          <a href="mailto:hsharshit4545@gmail.com" class="footer-link">Email</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+
+      // ── Scroll-aware header ──────────────────────────────────────
+      var header = document.getElementById('siteHeader');
+      window.addEventListener('scroll', function () {
+        header.classList.toggle('scrolled', window.scrollY > 24);
+      }, { passive: true });
+
+      // ── Mobile nav toggle ────────────────────────────────────────
+      var toggle = document.getElementById('navToggle');
+      var links  = document.getElementById('navLinks');
+
+      toggle.addEventListener('click', function () {
+        var expanded = toggle.getAttribute('aria-expanded') === 'true';
+        toggle.setAttribute('aria-expanded', String(!expanded));
+        toggle.classList.toggle('active');
+        links.classList.toggle('open');
+        document.body.classList.toggle('nav-open');
+      });
+
+      links.querySelectorAll('a').forEach(function (link) {
+        link.addEventListener('click', function () {
+          toggle.setAttribute('aria-expanded', 'false');
+          toggle.classList.remove('active');
+          links.classList.remove('open');
+          document.body.classList.remove('nav-open');
+        });
+      });
+
+      document.addEventListener('click', function (e) {
+        if (links.classList.contains('open') && !header.contains(e.target)) {
+          toggle.setAttribute('aria-expanded', 'false');
+          toggle.classList.remove('active');
+          links.classList.remove('open');
+          document.body.classList.remove('nav-open');
+        }
+      });
+
+      // ── Scroll reveal ────────────────────────────────────────────
+      // Progressive enhancement: only activate when IntersectionObserver
+      // is available. Without JS, all .reveal elements are fully visible.
+      if ('IntersectionObserver' in window) {
+        document.body.classList.add('js-reveal');
+
+        var observer = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, {
+          threshold: 0.10,
+          rootMargin: '0px 0px -32px 0px'
+        });
+
+        document.querySelectorAll('.reveal').forEach(function (el) {
+          observer.observe(el);
+        });
+      }
+
+    })();
+  </script>
+
+</body>
 </html>
