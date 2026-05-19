@@ -14,8 +14,8 @@
   --bg-alt:         #070b13;
 
   /* Surface ladder */
-  --surface:        #0d1524;
-  --surface-2:      #111c2e;
+  --surface:        #0d1422;
+  --surface-2:      #111b2d;
   --surface-hover:  #17263d;
 
   /* Borders */
@@ -37,10 +37,14 @@
   /* Depth accent — violet */
   --accent-purple:  #8b5cf6;
 
+  /* Warm accent — used sparingly for depth only */
+  --accent-warm:     #f97316;
+  --accent-warm-dim: rgba(249, 115, 22, 0.06);
+
   /* Text */
   --text:           #edf4ff;
   --text-2:         #9eb3cf;
-  --text-3:         #60748f;
+  --text-3:         #64748b;
   --white:          #f0f6ff;
 
   /* Typography — system font stack only */
@@ -97,6 +101,18 @@ body.nav-open {
   overflow: hidden;
 }
 
+/* Grain/noise overlay — subtle texture across the full page */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
+  opacity: 0.032;
+  pointer-events: none;
+  z-index: 9999;
+  mix-blend-mode: soft-light;
+}
+
 a {
   color: inherit;
   text-decoration: none;
@@ -126,6 +142,7 @@ section[id] {
 
 .section {
   padding: var(--section-y) 0;
+  position: relative;
 }
 
 .section-alt {
@@ -161,6 +178,134 @@ section[id] {
   line-height: 1.75;
   margin-bottom: 48px;
 }
+
+/* ----------------------------------------------------------------
+   Section ambient glows — site-wide visual identity
+   Each section gets a unique radial glow character.
+   Pseudo-elements sit below section content (z-index: 0).
+---------------------------------------------------------------- */
+
+/* Who I Help — blue from top-right */
+#who { overflow: hidden; }
+#who::before {
+  content: '';
+  position: absolute;
+  top: -60px;
+  right: -80px;
+  width: 640px;
+  height: 500px;
+  background: radial-gradient(
+    ellipse at 65% 25%,
+    rgba(59, 130, 246, 0.07) 0%,
+    rgba(34, 211, 238, 0.03) 50%,
+    transparent 70%
+  );
+  pointer-events: none;
+  z-index: 0;
+}
+#who > .container { position: relative; z-index: 1; }
+
+/* Problems I Solve — warm amber depth + blue, top-right */
+#problems { overflow: hidden; }
+#problems::before {
+  content: '';
+  position: absolute;
+  top: -40px;
+  right: -60px;
+  width: 680px;
+  height: 540px;
+  background: radial-gradient(
+    ellipse at 65% 25%,
+    rgba(249, 115, 22, 0.055) 0%,
+    rgba(59, 130, 246, 0.045) 45%,
+    transparent 70%
+  );
+  pointer-events: none;
+  z-index: 0;
+}
+#problems > .container { position: relative; z-index: 1; }
+
+/* Services — centered blue bloom from top */
+#services { overflow: hidden; }
+#services::before {
+  content: '';
+  position: absolute;
+  top: -80px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1100px;
+  height: 480px;
+  background: radial-gradient(
+    ellipse at 50% 10%,
+    rgba(59, 130, 246, 0.075) 0%,
+    rgba(34, 211, 238, 0.03) 55%,
+    transparent 70%
+  );
+  pointer-events: none;
+  z-index: 0;
+}
+#services > .container { position: relative; z-index: 1; }
+
+/* Why Work With Me — violet from bottom-left */
+#why { overflow: hidden; }
+#why::before {
+  content: '';
+  position: absolute;
+  bottom: -60px;
+  left: -60px;
+  width: 740px;
+  height: 580px;
+  background: radial-gradient(
+    ellipse at 25% 75%,
+    rgba(139, 92, 246, 0.075) 0%,
+    rgba(59, 130, 246, 0.03) 55%,
+    transparent 70%
+  );
+  pointer-events: none;
+  z-index: 0;
+}
+#why > .container { position: relative; z-index: 1; }
+
+/* Proof of Work — cyan from bottom-right */
+#work { overflow: hidden; }
+#work::before {
+  content: '';
+  position: absolute;
+  bottom: -40px;
+  right: -40px;
+  width: 600px;
+  height: 420px;
+  background: radial-gradient(
+    ellipse at 70% 70%,
+    rgba(34, 211, 238, 0.065) 0%,
+    rgba(59, 130, 246, 0.03) 50%,
+    transparent 68%
+  );
+  pointer-events: none;
+  z-index: 0;
+}
+#work > .container { position: relative; z-index: 1; }
+
+/* Process — centered cyan along the timeline */
+#process { overflow: hidden; }
+#process::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 960px;
+  height: 300px;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(34, 211, 238, 0.055) 0%,
+    rgba(59, 130, 246, 0.03) 50%,
+    transparent 72%
+  );
+  pointer-events: none;
+  z-index: 0;
+}
+#process > .container { position: relative; z-index: 1; }
 
 /* ----------------------------------------------------------------
    Scroll Reveal — progressive enhancement
@@ -784,8 +929,14 @@ section[id] {
 .cap-rail {
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
-  background-color: var(--bg-alt);
-  padding: 18px 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(34, 211, 238, 0.028) 0%,
+    var(--bg-alt) 40%,
+    var(--bg-alt) 60%,
+    rgba(59, 130, 246, 0.022) 100%
+  );
+  padding: 20px 0;
 }
 
 .cap-pills {
@@ -867,8 +1018,9 @@ section[id] {
 
 .problem-card {
   padding: 28px 24px;
-  background: linear-gradient(145deg, var(--surface) 0%, rgba(13, 21, 36, 0.55) 100%);
+  background: linear-gradient(145deg, var(--surface) 0%, rgba(13, 21, 34, 0.55) 100%);
   border: 1px solid var(--border);
+  border-top: 2px solid rgba(59, 130, 246, 0.22);
   border-radius: var(--radius-lg);
   transition:
     border-color var(--ease-md),
@@ -879,8 +1031,11 @@ section[id] {
 
 .problem-card:hover {
   border-color: var(--border-strong);
+  border-top-color: rgba(59, 130, 246, 0.50);
   background: linear-gradient(145deg, var(--surface-2) 0%, var(--surface) 100%);
-  box-shadow: 0 10px 36px rgba(0, 0, 0, 0.38);
+  box-shadow:
+    0 10px 36px rgba(0, 0, 0, 0.38),
+    0 0 28px rgba(59, 130, 246, 0.08);
   transform: translateY(-2px);
 }
 
@@ -1091,7 +1246,7 @@ section[id] {
   padding: 28px 24px;
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
-  background: transparent;
+  background: linear-gradient(145deg, rgba(13, 21, 34, 0.82) 0%, rgba(7, 11, 19, 0.45) 100%);
   transition:
     border-color var(--ease-md),
     background var(--ease-md),
@@ -1101,8 +1256,8 @@ section[id] {
 
 .why-item:hover {
   border-color: var(--border-strong);
-  background: linear-gradient(145deg, var(--surface) 0%, transparent 100%);
-  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.30);
+  background: linear-gradient(145deg, var(--surface) 0%, rgba(13, 21, 34, 0.70) 100%);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.36), 0 0 20px rgba(59, 130, 246, 0.05);
   transform: translateY(-2px);
 }
 
@@ -1224,10 +1379,13 @@ section[id] {
   background: linear-gradient(
     to right,
     transparent,
-    var(--border-strong) 10%,
-    var(--border-strong) 90%,
+    rgba(34, 211, 238, 0.15) 10%,
+    rgba(59, 130, 246, 0.30) 30%,
+    rgba(34, 211, 238, 0.30) 70%,
+    rgba(34, 211, 238, 0.15) 90%,
     transparent
   );
+  box-shadow: 0 0 10px rgba(34, 211, 238, 0.14);
   z-index: 0;
   pointer-events: none;
 }
@@ -1289,18 +1447,37 @@ section[id] {
   overflow: hidden;
 }
 
+.section-contact::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(59, 130, 246, 0.30) 30%,
+    rgba(34, 211, 238, 0.40) 50%,
+    rgba(59, 130, 246, 0.30) 70%,
+    transparent
+  );
+  pointer-events: none;
+}
+
 .contact-glow {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 700px;
-  height: 500px;
+  width: 960px;
+  height: 680px;
   background: radial-gradient(
     ellipse at center,
-    rgba(59, 130, 246, 0.08) 0%,
-    rgba(34, 211, 238, 0.04) 45%,
-    transparent 70%
+    rgba(59, 130, 246, 0.13) 0%,
+    rgba(34, 211, 238, 0.07) 38%,
+    rgba(139, 92, 246, 0.04) 60%,
+    transparent 72%
   );
   pointer-events: none;
 }
