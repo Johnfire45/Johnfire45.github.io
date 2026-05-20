@@ -1,12 +1,16 @@
-# johnfire45.github.io
+# RedSpire Security — johnfire45.github.io
 
-Personal GitHub Pages site for Harshit Shah — Independent Cybersecurity Consultant.
+GitHub Pages backend for RedSpire Security — Cybersecurity Consulting for Startups, SaaS & Growing Businesses.
+
+**Public website:** https://redspiresecurity.com/
+**Founded by:** Harshit Shah · Cybersecurity Consultant
 
 ## Live URLs
 
 | URL | Content |
 |---|---|
-| https://johnfire45.github.io/ | Consulting website (primary) |
+| https://redspiresecurity.com/ | RedSpire Security website (primary, via CNAME) |
+| https://johnfire45.github.io/ | GitHub Pages backend |
 | https://johnfire45.github.io/portfolio/ | Old portfolio (preserved) |
 
 ## Repo structure
