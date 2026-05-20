@@ -1,5 +1,5 @@
 /* ================================================================
-   Harshit Shah — Cybersecurity Consulting
+   RedSpire Security — Cybersecurity Consulting
    styles.css
    Dark professional theme. No frameworks. Plain CSS only.
    Design direction: Linear (premium dark SaaS) + HashiCorp (enterprise clarity)
@@ -353,9 +353,10 @@ section[id] {
   to   { opacity: 1; transform: translateY(0); }
 }
 
-.hero .eyebrow       { animation: hero-fade-up 0.55s ease 0.00s both; }
-.hero .hero-heading  { animation: hero-fade-up 0.60s ease 0.09s both; }
-.hero .hero-sub      { animation: hero-fade-up 0.60s ease 0.19s both; }
+.hero .hero-brand    { animation: hero-fade-up 0.55s ease 0.00s both; }
+.hero .eyebrow       { animation: hero-fade-up 0.55s ease 0.06s both; }
+.hero .hero-heading  { animation: hero-fade-up 0.60s ease 0.14s both; }
+.hero .hero-sub      { animation: hero-fade-up 0.60s ease 0.24s both; }
 .hero .hero-actions  { animation: hero-fade-up 0.55s ease 0.29s both; }
 .hero .cred-badges   { animation: hero-fade-up 0.55s ease 0.39s both; }
 .hero .hero-card-col { animation: hero-fade-up 0.70s ease 0.22s both; }
@@ -496,17 +497,17 @@ section[id] {
 }
 
 .logo-name {
-  font-size: 0.9375rem;
-  font-weight: 700;
+  font-size: 1.0625rem;
+  font-weight: 800;
   color: var(--white);
-  letter-spacing: -0.015em;
+  letter-spacing: -0.02em;
 }
 
 .logo-sub {
-  font-size: 0.6875rem;
-  color: var(--text-3);
-  font-weight: 400;
-  letter-spacing: 0.01em;
+  font-size: 0.72rem;
+  color: var(--text-2);
+  font-weight: 500;
+  letter-spacing: 0.02em;
 }
 
 .nav-links {
@@ -705,6 +706,29 @@ section[id] {
 
 .hero-content {
   max-width: 580px;
+}
+
+/* Brand label above the hero heading */
+.hero-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+  font-size: 1.0625rem;
+  font-weight: 800;
+  color: var(--white);
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+
+.hero-brand::before {
+  content: '';
+  display: inline-block;
+  width: 3px;
+  height: 1em;
+  background: var(--accent-2);
+  border-radius: 2px;
+  flex-shrink: 0;
 }
 
 .hero-heading {
